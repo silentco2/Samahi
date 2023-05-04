@@ -17,7 +17,8 @@
 
 body {
   background-color: var(--primary_color);
-  color: var(--secondary_color); }
+  color: var(--secondary_color);
+  overflow-x: hidden; }
 
 section {
   overflow-x: clip; }
@@ -74,6 +75,14 @@ hr {
   font-size: 2.5rem;
   font-weight: lighter; }
 
+@media only screen and (max-width: 56.25em) {
+  :root {
+    font-size: 75%; } }
+
+@media only screen and (max-width: 37.5em) {
+  :root {
+    font-size: 50%; } }
+
 .btn {
   border: 1px solid var(--secondary_color);
   border-radius: 2rem;
@@ -123,7 +132,27 @@ hr {
   border-radius: 50%;
   background: radial-gradient(22.43% 22.43% at 50% 50%, var(--secondary_color) 0%, var(--primary_color) 100%);
   filter: blur(130px);
-  z-index: -99999; }
+  z-index: -99999;
+  opacity: 0; }
+  @media only screen and (max-width: 37.5em) {
+    .highlight {
+      opacity: 1; } }
+  @media only screen and (max-width: 56.25em) {
+    .highlight {
+      opacity: 1; } }
+  .highlight-pointer {
+    height: 50rem;
+    width: 50rem;
+    opacity: 1;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); }
+    @media only screen and (max-width: 37.5em) {
+      .highlight-pointer {
+        opacity: 0; } }
+    @media only screen and (max-width: 56.25em) {
+      .highlight-pointer {
+        opacity: 0; } }
 
 .section-title {
   height: 3.5rem;
